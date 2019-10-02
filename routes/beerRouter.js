@@ -50,6 +50,25 @@ beerRouter.delete('/:beer_id', (req, res) => {
     })
 })
 
+beerRouter.put('/:beer_id', (req, res) => {
+    Beer.findById(req.params.beer_id, (err, beer) => {
+        if (err) {
+            res.status(400).send(err)
+        } else {
+            beer.name = req.body.name
+            beer.rating = req.body.rating
+
+            beer.save((err, beer) => {
+                if (err) {
+                    res.status(400).send(err)
+                } else {
+                    res.send(`Beer updated:\n${beer}`)
+                }
+            })
+        }
+    })
+})
+
 beerRouter.use('/', (req, res) => {
     res.send('Beer router is working!')
 })
