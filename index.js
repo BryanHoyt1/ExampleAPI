@@ -1,5 +1,9 @@
 const express = require('express')
 const app = express()
+const beerRouter = require('./routes/beerRouter')
+const mongoose = require('mongoose')
+
+app.get('/beers', beerRouter)
 
 app.use('/', (req, res) => {
     console.log(`Something hit me!`)
