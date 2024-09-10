@@ -1,2 +1,2 @@
-# beerAPI
-Restful Beer API
+# ExampleAPI
+Restful Example API
