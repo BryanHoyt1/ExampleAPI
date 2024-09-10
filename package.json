@@ -1,7 +1,7 @@
 {
-  "name": "beerapi",
+  "name": "exampleapi",
   "version": "1.0.0",
-  "description": "Restful Beer API",
+  "description": "Restful Example API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
